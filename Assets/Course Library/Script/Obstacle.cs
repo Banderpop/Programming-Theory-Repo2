@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Obstacle : MonoBehaviour
 {
     // Start is called before the first frame update
-    float moveSpeed  = 10;
+    
     protected  virtual float LeftBound { get; set; } = -15;
-
+    // ENCAPSULATION
+    float moveSpeed = 10;
     protected float MoveSpeed
     {
         get { return moveSpeed; }
@@ -35,7 +37,7 @@ public class Obstacle : MonoBehaviour
         
     }
 
-
+    // ABSTRACTION
     protected virtual void Move()
     {
         transform.Translate(Vector3.left * Time.deltaTime * moveSpeed, Space.World);
