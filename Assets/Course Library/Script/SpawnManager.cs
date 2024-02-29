@@ -5,7 +5,8 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject obstaclePrefab;
+
+    public List<GameObject> obstaclePrefabs;
     public Vector3 spawnPos = new Vector3(25, 0, 0);
 
     private float startDelay = 2;
@@ -26,9 +27,10 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnObstacle()
     {
+        int index = Random.Range(0, obstaclePrefabs.Count);
         if(playerControllerScript.gameOver == false)
         {
-            Instantiate(obstaclePrefab, spawnPos, obstaclePrefab.transform.rotation);
+            Instantiate(obstaclePrefabs[index], spawnPos, obstaclePrefabs[index].transform.rotation);
         }
         
     }
