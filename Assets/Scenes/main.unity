@@ -554,8 +554,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679e43143db9ba540aaa2dfc4b698d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 20
-  LeftBound: -15
 --- !u!114 &835818923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -682,7 +680,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e1a48c07665b1d4abecfa100b671633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 915743105360803789, guid: f7f890781352c3a49a8c8771fa107001, type: 3}
+  obstaclePrefabs:
+  - {fileID: 3113000998252141410, guid: f7f890781352c3a49a8c8771fa107001, type: 3}
+  - {fileID: 3329199754529990667, guid: 21d15a7db6f66df46884d6a1280d9e74, type: 3}
   spawnPos: {x: 25, y: 0, z: 0}
 --- !u!4 &1573406724
 Transform:
